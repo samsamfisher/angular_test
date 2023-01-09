@@ -1,0 +1,18 @@
+<!-- 
+La photo de l'utilisateur
+Un champ input pour éditer la citation (quote)
+L'âge
+Le nom et le prénom
+Un bouton pour masquer l'âge. Pense à la propriété hidden redéfinie par Angular. 
+N'hésite pas à fouiller sur internet 🤓 (en anglais naturellement,
+ tu y trouveras toujours beaucoup plus de réponses précises et pertinentes). 
+-->
+
+<img src="{{ user.photo }}" alt="">
+<div>
+    <input type="text" [(ngModel)]="user.quote" placeholder="">
+    <p>{{ user.quote }}</p>
+    <p *ngIf="toDisplay">{{ user.age }}</p>
+    <p>{{ user.firstName }} {{ user.name }}</p>
+    <button (click)="toggleData()">Hidden age</button>
+</div>
